@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def login
     @user = User.find_by(email: params[:email])
 
@@ -27,7 +28,7 @@ class UsersController < ApplicationController
     if @user.valid?
       @user.save
     else
-      flash[:alert] = @user.errors
+      flash[:alert] = @user.errors.messages
     end
   end
 end

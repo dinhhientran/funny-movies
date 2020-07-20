@@ -1,4 +1,5 @@
 class ShareController < ApplicationController
+
   YOUTUBE_URL_REGEX = /^(http(s)??\:\/\/)?(www\.)?((youtube\.com\/watch\?v=)|(youtu.be\/))([a-zA-Z0-9\-_])+/
 
   before_action :authorized
@@ -20,11 +21,11 @@ class ShareController < ApplicationController
         )
         redirect_to root_path
       else
-        flash[:alert] = 'This Youtube video is not available!'
+        flash[:alert] = {:youtube_url => ['This Youtube video is not available!']}
         redirect_to share_path
       end
     else
-      flash[:alert] = 'Youtube URL is not valid!'
+      flash[:alert] = {:youtube_url => ['Youtube URL is not valid!']}
       redirect_to share_path
     end
   end
