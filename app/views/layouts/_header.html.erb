@@ -18,7 +18,7 @@
       <% if flash[:alert] %>
         <div class="alert alert-danger mt-2" role="alert">
           <% flash[:alert].each do |k,m| %>
-            <%= m.first %>
+            <div><%= m.first %></div>
           <% end %>
         </div>
       <%end %>
