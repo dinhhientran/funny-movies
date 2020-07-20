@@ -4,4 +4,7 @@ Rails.application.routes.draw do
 
   post 'login', to: 'users#login'
   get 'logout', to: 'users#logout'
+
+  get 'share', to: 'share#index'
+  post 'share', to: 'share#share'
 end

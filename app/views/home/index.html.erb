@@ -1,0 +1,19 @@
+<div class="row mt-5 d-flex justify-content-center">
+  <div class="col-md-9">
+    <% if @movies %>
+      <% @movies.each do |movie| %>
+        <div class="row mt-5">
+          <div class="col-md-7"><div class="video-container"><%= raw movie.embed_code %></div></div>
+          <div class="col-md-5">
+            <div><h6><%= movie.title %></h6></div>
+            <div>Shared by: <%= movie.user.email %></div>
+            <div>Description:</div>
+            <div><%= movie.description %></div>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <div>No shared movies</div>
+    <% end %>
+  </div>
+</div>
