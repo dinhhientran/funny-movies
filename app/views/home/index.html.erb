@@ -1,14 +1,14 @@
 <div class="row mt-5 d-flex justify-content-center">
-  <div class="col-md-9">
+  <div class="col-md-12">
     <% if @movies %>
       <% @movies.each do |movie| %>
-        <div class="row mt-5">
+        <div class="row mt-3">
           <div class="col-md-7"><div class="video-container"><%= raw movie.embed_code %></div></div>
           <div class="col-md-5">
-            <div><h6><%= movie.title %></h6></div>
-            <div>Shared by: <%= movie.user.email %></div>
-            <div>Description:</div>
-            <div><%= movie.description %></div>
+            <div><h6><b><%= movie.title %></b></h6></div>
+            <div><b>Shared by:</b> <%= movie.user.email %></div>
+            <div class="mt-2"><b>Description:</b></div>
+            <div class="text-justify"><%= movie.description %></div>
           </div>
         </div>
       <% end %>
