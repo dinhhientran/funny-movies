@@ -1,1 +1,1 @@
-VideoInfo.provider_api_keys = { youtube: 'AIzaSyATfYQ-M_LybFrP6_L0Ze_1L7ktoDWjBxc' }
+VideoInfo.provider_api_keys = { youtube: ENV['YOUTUBE_API_KEY'] }
